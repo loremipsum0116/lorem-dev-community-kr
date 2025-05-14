@@ -1,0 +1,90 @@
+body {
+    background-color: #f8f9fa;
+    font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+}
+
+.hero {
+    color: white;
+    padding-top: 300px;
+    padding-bottom: 300px;
+    text-align: center;
+    background-image: url('../html/home_bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.fixed-card {
+    width: 280px;
+    /* 고정 가로 너비 */
+    min-height: 220px;
+    /* 카드 높이도 일정하게 */
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    /* 반투명 검정 */
+    z-index: 1;
+}
+
+.hero .container {
+    z-index: 2;
+    /* 오버레이 위에 오도록 */
+    position: relative;
+}
+
+.post-card {
+    transition: transform 0.2s;
+}
+
+.post-card:hover {
+    transform: scale(1.02);
+}
+
+.custom-offset {
+    padding-left: 100px;
+    /* or margin-left: 40px */
+}
+
+.custom-button {
+    background-color: rgb(255, 235, 0);
+    color: black;
+    border: none;
+    font-weight: bold;
+    width: 200px;
+    padding: 10px;
+}
+
+.custom-button2 {
+    border: 1px solid white;
+    color: white;
+    font-weight: bold;
+    width: 200px;
+    padding: 10px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+input::placeholder {
+    font-family: inherit;
+    /* 또는 명시적으로 지정 */
+}
+
+.navbar .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.85);
+    /* 흰색에 가까운 회색 */
+    opacity: 1;
+    /* Firefox 대응 */
+}

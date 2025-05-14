@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>로렘 - 세상을 보다 semantic하게 </title>
+    <link href="../../../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="icon" type="image/png" href="lorem2.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <style>
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-color: rgba(0, 0, 0, 0.5);
+            background-size: 60% 60%;
+            border-radius: 50%;
+            width: 3rem;
+            height: 3rem;
+        }
+
+        section.container {
+            margin-top: 200px !important;
+            margin-bottom: 50px;
+        }
+
+        .hero {
+            margin: 0 !important;
+            padding-top: 300px;
+        }
+
+        #kkt:hover {
+            background-color: #E0B800;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 내비게이션 -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="lorem2_cleaned.png" alt="로렘 로고" width="70" height="30" class="me-0 mb-1">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-5">
+                    <li class="nav-item"><a class="nav-link" href="#">Q&A</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">오늘의 <span style="color: red;">HOT</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">개발 트렌드</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">AI/머신러닝</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">포트폴리오</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Jobs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">자유 게시판</a></li>
+                </ul>
+                <form class="d-flex align-items-center" role="search" style="margin-left: auto; margin-right: -250px;">
+                    <div class="input-group input-group-sm">
+                        <input type="search" class="form-control bg-dark text-white border-secondary rounded-start-pill"
+                            placeholder="검색" aria-label="Search" style="min-height: 30px; width: 150px;">
+                        <button class="btn btn-outline-light border-secondary rounded-end-pill" type="submit">
+                            <i class="bi bi-search"></i>
+                        </button>
+                    </div>
+                </form>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="login.html">로그인</a></li>
+                    <li class="nav-item"><a class="nav-link" href="create_acc.html">회원가입</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 히어로 -->
+    <section class="hero position-relative">
+        <div class="overlay position-absolute top-0 start-0 w-100 h-100"></div>
+        <div class="container custom-offset position-relative">
+            <p class="lead text-start">프로그래밍, AI, IT 취업에 관심 있는 개발자들의 필수 커뮤니티</p>
+            <h1 class="display-5 fw-bold text-start mt-4" style="font-family: 'KakaoBigSans-ExtraBold';">세상을 보다<br>
+                semantic하게, 로렘</h1>
+            <div class="text-start">
+                <a href="create_acc.html" id="kkt" class="btn btn-lg mt-4 custom-button"><img src="kakao_logo.png" alt="카카오 로고"
+                        width="20" height="20" style="margin-right:3px;"><span style="font-size: 15px;">카카오로
+                        가입하기</span></a>
+                <a href="create_acc.html" class="btn btn-lg mt-4 custom-button2" style="margin-left: 10px;"><span
+                        style="font-size: 15px;">이메일로 가입하기</span></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <p class="fw-bold mb-1 text-center">💡 오늘의 개발 퀴즈</p>
+        <p class="text-center">JavaScript에서 <code>==</code>와 <code>===</code>의 차이는?</p>
+        <div class="text-center">
+            <a href="#" class="btn btn-outline-secondary btn-sm">정답 보러가기</a>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h2 class="mb-0">🔥 오늘의 <span style="color: red;">HOT</span></h2>
+            <a href="#" class="text-decoration-underline text-muted small">더보기</a>
+        </div>
+        <div id="popularPostsCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center">
+                        <div class="col-lg-3">
+                            <div class="card post-card h-100 fixed-card">
+                                <div class="card-body">
+                                    <h5 class="card-title">ChatGPT로 코딩 테스트 후기</h5>
+                                    <p class="card-text">GPT한테 문제 설명하니까 바로 풀어줌 ㅋㅋㅋ</p>
+                                </div>
+                                <div class="card-footer text-muted">조회수 1.2K · 댓글 45</div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="card post-card h-100 fixed-card">
+                                <div class="card-body">
+                                    <h5 class="card-title">AI 면접 질문 요약 (2025 상반기)</h5>
+                                    <p class="card-text">요즘 많이 나오는 질문들 모아봤습니다.</p>
+                                </div>
+                                <div class="card-footer text-muted">조회수 860 · 댓글 21</div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="card post-card h-100 fixed-card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Python 기반 프로젝트 추천</h5>
+                                    <p class="card-text">포트폴리오용으로 좋은 주제 리스트 모음</p>
+                                </div>
+                                <div class="card-footer text-muted">조회수 740 · 댓글 12</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center">
+                        <div class="col-lg-3">
+                            <div class="card post-card h-100 fixed-card">
+                                <div class="card-body">
+                                    <h5 class="card-title">개발자 포트폴리오 준비 가이드</h5>
+                                    <p class="card-text">채용 담당자가 좋아하는 구성은?</p>
+                                </div>
+                                <div class="card-footer text-muted">조회수 1.4K · 댓글 33</div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="card post-card h-100 fixed-card">
+                                <div class="card-body">
+                                    <h5 class="card-title">웹 개발자 로드맵 2025</h5>
+                                    <p class="card-text">프론트부터 백엔드까지 단계별 로드맵</p>
+                                </div>
+                                <div class="card-footer text-muted">조회수 999 · 댓글 10</div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="card post-card h-100 fixed-card">
+                                <div class="card-body">
+                                    <h5 class="card-title">코딩 테스트 준비 팁</h5>
+                                    <p class="card-text">시간 줄이는 팁과 마인드셋</p>
+                                </div>
+                                <div class="card-footer text-muted">조회수 507 · 댓글 8</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#popularPostsCarousel"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#popularPostsCarousel"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="alert alert-warning text-center" role="alert">
+            🎉 <strong>2025 상반기 개발자 설문조사</strong>에 참여하고 스타벅스 쿠폰 받자! <a href="#" class="alert-link">지금 참여하기 →</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="alert alert-info text-center" role="alert">
+            ✉️ <strong>매주 최신 개발 소식</strong> 받아보세요! <a href="#" class="alert-link">뉴스레터 신청하기 →</a>
+        </div>
+    </div>
+
+    <section class="container">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h2 class="mb-0">✨ 최신 Jobs</h2>
+            <a href="#" class="text-decoration-underline text-muted small">더보기</a>
+        </div>
+        <div id="hotJobsCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center">
+                        <div class="col-lg-3">
+                            <div class="card post-card h-100 fixed-card">
+                                <div class="card-body">
+                                    <h5 class="card-title">백엔드 개발자 (Spring)</h5>
+                                    <p class="card-text">신규 플랫폼 백엔드 개발자 모집 (신입~3년)</p>
+                                </div>
+                                <div class="card-footer text-muted">위치: 서울 · 연봉 4,200만</div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="card post-card h-100 fixed-card">
+                                <div class="card-body">
+                                    <h5 class="card-title">AI 모델링 엔지니어</h5>
+                                    <p class="card-text">딥러닝 기반 추천 시스템 구축 경험자 우대</p>
+                                </div>
+                                <div class="card-footer text-muted">위치: 판교 · 연봉 5,500만</div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="card post-card h-100 fixed-card">
+                                <div class="card-body">
+                                    <h5 class="card-title">프론트엔드 React 개발자</h5>
+                                    <p class="card-text">웹앱 SPA 구조 이해 필수, Git 협업</p>
+                                </div>
+                                <div class="card-footer text-muted">위치: 원격 · 연봉 협의</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center">
+                        <div class="col-lg-3">
+                            <div class="card post-card h-100 fixed-card">
+                                <div class="card-body">
+                                    <h5 class="card-title">DevOps 엔지니어</h5>
+                                    <p class="card-text">CI/CD 파이프라인 구축 경험자 우대</p>
+                                </div>
+                                <div class="card-footer text-muted">위치: 부산 · 연봉 5,000만</div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="card post-card h-100 fixed-card">
+                                <div class="card-body">
+                                    <h5 class="card-title">데이터 분석가</h5>
+                                    <p class="card-text">Python, SQL, Tableau 사용 능숙자</p>
+                                </div>
+                                <div class="card-footer text-muted">위치: 강남 · 연봉 4,800만</div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="card post-card h-100 fixed-card">
+                                <div class="card-body">
+                                    <h5 class="card-title">모바일 앱 개발자 (Flutter)</h5>
+                                    <p class="card-text">하이브리드 앱 개발 경험 우대</p>
+                                </div>
+                                <div class="card-footer text-muted">위치: 대전 · 연봉 협의</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#hotJobsCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#hotJobsCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="alert alert-primary text-center" role="alert">
+            💼 <strong>로렘소프트 신입 백엔드 개발자 채용</strong> 중! <a href="#" class="alert-link">채용공고 보기 →</a>
+        </div>
+    </div>
+
+    <section class="container">
+        <h2 class="mb-4">🗂️ 게시판 바로가기</h2>
+        <div class="list-group">
+            <a href="#" class="list-group-item list-group-item-action">💻 개발 트렌드</a>
+            <a href="#" class="list-group-item list-group-item-action">🧠 AI/머신러닝</a>
+            <a href="#" class="list-group-item list-group-item-action">📂 포트폴리오</a>
+            <a href="#" class="list-group-item list-group-item-action">💼 Jobs</a>
+            <a href="#" class="list-group-item list-group-item-action">☕ 자유 게시판</a>
+        </div>
+    </section>
+
+    <footer class="bg-light border-top py-4 mt-5">
+        <div class="footer-fixed-width mx-auto">
+            <div class="row align-items-start">
+                <div class="col-md-3 mb-3">
+                    <img src="lorem_bw.png" alt="로렘 로고" width="120">
+                    <p class="text-muted mt-2">All That Developer</p>
+                    <div class="d-flex gap-3">
+                        <a href="#"><i class="bi bi-facebook fs-5 text-secondary"></i></a>
+                        <a href="#"><i class="bi bi-youtube fs-5 text-secondary"></i></a>
+                        <a href="#"><i class="bi bi-envelope fs-5 text-secondary"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="d-flex flex-wrap gap-3 mb-2">
+                        <a href="#" class="text-muted small text-decoration-none">회사소개</a>
+                        <a href="#" class="text-muted small text-decoration-none">공지사항</a>
+                        <a href="#" class="text-muted small text-decoration-none">고객센터</a>
+                        <a href="#" class="text-muted small text-decoration-none">광고문의</a>
+                        <a href="#" class="text-muted small text-decoration-none">운영정책</a>
+                        <a href="#" class="text-muted small text-decoration-none fw-bold">개인정보 처리방침</a>
+                        <a href="#" class="text-muted small text-decoration-none">이용약관</a>
+                    </div>
+                    <p class="text-muted small mb-1">상호명: <b>(주)로렘소프트</b> | 대표명: <b>심현석</b></p>
+                    <p class="text-muted small mb-1">사업자등록번호: 123-45-67890 | 통신판매업신고번호: 2025-서울강남-0000호</p>
+                    <p class="text-muted small mb-1">주소: 청주시 서원구 성화동 123, 1층 (06103) | 이메일: sst7050@naver.com</p>
+                    <p class="text-muted small">© 2025 Lorem Project. All rights reserved.</p>
+                </div>
+                <div class="col-md-3 text-md-end">
+                    <p class="text-muted small mb-2">SPONSORED BY</p>
+                    <div class="d-flex justify-content-md-end gap-3">
+                        <img src="sponsor1.png" alt="sponsor1" height="30">
+                        <img src="sponsor2.png" alt="sponsor2" height="30">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <style>
+        /* 공통 푸터 고정 너비 적용 */
+        .footer-fixed-width {
+            max-width: 1320px;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    </style>
+
+
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
