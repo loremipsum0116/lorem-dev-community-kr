@@ -5,8 +5,8 @@ body {
 
 .hero {
     color: white;
-    padding-top: 650px;
-    padding-bottom: 650px;
+    padding-top: 500px;
+    padding-bottom: 550px;
     text-align: center;
     background-image: url('../html/home_bg.png');
     background-size: cover;
@@ -15,21 +15,6 @@ body {
 
 }
 
-
-@media (max-width: 1024px) {
-    .fixed-hero-text {
-        margin-left: 220px;
-        /* 화면 좁아지면 여백 줄이기 */
-    }
-}
-
-@media (max-width: 768px) {
-    .fixed-hero-text {
-        margin-left: 40px;
-        /* 더 좁아지면 최소 여백 유지 */
-        margin-right: 40px;
-    }
-}
 
 .fixed-card {
     width: 280px;
