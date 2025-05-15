@@ -5,8 +5,8 @@ body {
 
 .hero {
     color: white;
-    padding-top: 300px;
-    padding-bottom: 300px;
+    padding-top: 500px;
+    padding-bottom: 500px;
     text-align: center;
     background-image: url('../html/home_bg.png');
     background-size: cover;
@@ -23,7 +23,7 @@ body {
 }
 
 .overlay {
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.5);
     /* 반투명 검정 */
     z-index: 1;
 }
